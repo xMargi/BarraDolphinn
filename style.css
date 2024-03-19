@@ -1,0 +1,42 @@
+:root{
+    --amarelo: #e3cb75;
+    --azul: #1f545c;
+}
+
+body{
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra-container{
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.barra{
+    width: 400px;
+    height: 8px;
+    background: linear-gradient(to right, var(--azul), var(--amarelo), var(--azul));
+    border: 1px solid var(--azul);
+    border-radius: 10px;
+    background-color: var(--azul);
+    background-size: 200% 50%;
+    animation: background-gradient 2s infinite alternate;
+}
+
+@keyframes background-gradient {
+    0% {
+        background-position: 0% 50%; /* Posição inicial do gradiente */
+    }
+    100% {
+        background-position: 100% 50%; /* Posição final do gradiente */
+    }
+}
